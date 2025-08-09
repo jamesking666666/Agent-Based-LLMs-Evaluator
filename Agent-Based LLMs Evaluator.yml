@@ -1,0 +1,2058 @@
+app:
+  description: Leveraging LLMs to Design an Advanced Agent-Based Evaluator for Deep
+    Learning Models
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: Agent-Based LLMs Evaluator
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: github
+  value:
+    github_plugin_unique_identifier: jaguarliuu/rookie_text2data:0.3.1@a66850fee97d84844880b8316fa6f1c67f04b21b35f5ee4489ca5a8fab740e2a
+    package: workspace.difypkg
+    repo: jaguarliuu/rookie_text2data
+    version: 0.3.1-sqlserver
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: lefenghx/json_get_fix:0.0.1@4ba81112f00d3a7ac924381ebba2852ed33d2a70e687d13070ecac3f30b058da
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: jaguarliuu/rookie_data_alchemy:0.0.4@2be34d32b23be1a447f7822b77dc54462155710ab1cd38d118e562fddbc13cdc
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.0.26@4f1c4ded3d189719b7dd54e9d4e5b26f724f3632f3dfaa299491b42accc112c8
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: bowenliang123/md_exporter:1.8.0@aa15ca94651e608fa2defef440cc5bbd22884053168bd2d41d132d5d1b021129
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/zhipuai:0.0.11@672f7bd6cf98b76245e5ff5ba9bd14a6386f91924e46a9c28091154ba401006d
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: Hello, I am the Data Query Assistant. If you need any data,
+      please feel free to ask me directly. If you need chart display, please let me
+      know. Currently, we support bar charts, line charts, pie charts, scatter plots,
+      scatter plots with ripple effects animation (bubble), K-line charts, radar charts,
+      heat maps, tree charts, rectangular tree charts, sunrise charts, maps, and path
+      charts
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        sourceType: llm
+        targetType: answer
+      id: llm-answer
+      selected: false
+      source: llm
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1743045229587-false-llm-target
+      selected: false
+      source: '1743045229587'
+      sourceHandle: 'false'
+      target: llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: if-else
+      id: 1742881171324-source-1743045229587-target
+      selected: false
+      source: '1742881171324'
+      sourceHandle: source
+      target: '1743045229587'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1743045229587-true-1743146693834-target
+      source: '1743045229587'
+      sourceHandle: 'true'
+      target: '1743146693834'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1742881140864-source-1743664802540-target
+      source: '1742881140864'
+      sourceHandle: source
+      target: '1743664802540'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1743664802540-source-1743662929844-target
+      source: '1743664802540'
+      sourceHandle: source
+      target: '1743662929844'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: tool
+      id: 1743662929844-source-1742881171324-target
+      source: '1743662929844'
+      sourceHandle: source
+      target: '1742881171324'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1750320697531-source-1743047486499-target
+      source: '1750320697531'
+      sourceHandle: source
+      target: '1743047486499'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1743045229587-87e1ae86-a74c-4cea-996f-3388eced0c80-1752739897988-target
+      source: '1743045229587'
+      sourceHandle: 87e1ae86-a74c-4cea-996f-3388eced0c80
+      target: '1752739897988'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1752739897988-source-1752740030034-target
+      source: '1752739897988'
+      sourceHandle: source
+      target: '1752740030034'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1752740030034-source-1752740052565-target
+      source: '1752740030034'
+      sourceHandle: source
+      target: '1752740052565'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1743045229587-561d7ebd-290f-4b9d-bbe8-5092ddf785aa-1752740299656-target
+      source: '1743045229587'
+      sourceHandle: 561d7ebd-290f-4b9d-bbe8-5092ddf785aa
+      target: '1752740299656'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1752740299656-source-1752740376952-target
+      source: '1752740299656'
+      sourceHandle: source
+      target: '1752740376952'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1752740376952-source-1752740400749-target
+      source: '1752740376952'
+      sourceHandle: source
+      target: '1752740400749'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1743045229587-25426991-f7b1-4b41-b1af-db0c173ac727-1752740533022-target
+      source: '1743045229587'
+      sourceHandle: 25426991-f7b1-4b41-b1af-db0c173ac727
+      target: '1752740533022'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1752740533022-source-1752740612501-target
+      source: '1752740533022'
+      sourceHandle: source
+      target: '1752740612501'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1752740612501-source-1752740629292-target
+      source: '1752740612501'
+      sourceHandle: source
+      target: '1752740629292'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1742881171324-fail-branch-1752742931945-target
+      source: '1742881171324'
+      sourceHandle: fail-branch
+      target: '1752742931945'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1743045229587-true-1752892995530-target
+      source: '1743045229587'
+      sourceHandle: 'true'
+      target: '1752892995530'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: tool
+      id: 1743045229587-true-1752893057157-target
+      source: '1743045229587'
+      sourceHandle: 'true'
+      target: '1752893057157'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1743146693834-source-1750320697531-target
+      source: '1743146693834'
+      sourceHandle: source
+      target: '1750320697531'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1752892995530-source-1750320697531-target
+      source: '1752892995530'
+      sourceHandle: source
+      target: '1750320697531'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: tool
+      id: 1752893057157-source-1750320697531-target
+      source: '1752893057157'
+      sourceHandle: source
+      target: '1750320697531'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: Start
+        type: start
+        variables: []
+      height: 54
+      id: '1742881140864'
+      position:
+        x: -576.5033352958709
+        y: 398.81229211385426
+      positionAbsolute:
+        x: -576.5033352958709
+        y: 398.81229211385426
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params: {}
+          mode: chat
+          name: glm-4-long
+          provider: langgenius/zhipuai/zhipuai
+        prompt_template:
+        - id: d5018c45-bcd1-415d-9bd9-b619b2ee3673
+          role: system
+          text: '##Role
+
+            You are a master of data analysis and summarizer
+
+            ##Task
+
+            You can combine user questions with the results obtained from database
+            queries, integrate and refine them, and reply to users with accurate and
+            appropriate natural language
+
+            ##Output
+
+            If the user is only querying data, they can directly reply to the data
+            content after refining it
+
+            If users require you to analyze data, you can provide professional analysis
+            content based on the data'
+        - id: bf0cbb0e-738f-46ff-b703-2fdcf929d784
+          role: user
+          text: 'User issues:{{#sys.query#}}
+
+            Data in the database:{{#1742881171324.text#}}'
+        selected: false
+        title: Summary of Results LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 96
+      id: llm
+      position:
+        x: 1002.5505873053348
+        y: 833.0325092109977
+      positionAbsolute:
+        x: 1002.5505873053348
+        y: 833.0325092109977
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#llm.text#}}'
+        desc: ''
+        selected: false
+        title: Data Response
+        type: answer
+        variables: []
+      height: 104
+      id: answer
+      position:
+        x: 1380.9001380019859
+        y: 833.0325092109977
+      positionAbsolute:
+        x: 1380.9001380019859
+        y: 833.0325092109977
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_strategy: fail-branch
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database type
+            ja_JP: Database type
+            pt_BR: Database type
+            zh_Hans: 数据库类型
+          label:
+            en_US: Database type
+            ja_JP: Database type
+            pt_BR: Database type
+            zh_Hans: 数据库类型
+          llm_description: Database type
+          max: null
+          min: null
+          name: db_type
+          options:
+          - label:
+              en_US: MySQL
+              ja_JP: MySQL
+              pt_BR: MySQL
+              zh_Hans: MySQL
+            value: mysql
+          - label:
+              en_US: PostgreSQL
+              ja_JP: PostgreSQL
+              pt_BR: PostgreSQL
+              zh_Hans: PostgreSQL
+            value: postgresql
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database ip/host
+            ja_JP: Database ip/host
+            pt_BR: Database ip/host
+            zh_Hans: 数据库IP/域名
+          label:
+            en_US: Database ip/host
+            ja_JP: Database ip/host
+            pt_BR: Database ip/host
+            zh_Hans: 数据库IP/域名
+          llm_description: Database ip/host
+          max: null
+          min: null
+          name: host
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database port
+            ja_JP: Database port
+            pt_BR: Database port
+            zh_Hans: 数据库端口
+          label:
+            en_US: Database port
+            ja_JP: Database port
+            pt_BR: Database port
+            zh_Hans: 数据库端口
+          llm_description: Database port
+          max: 65535
+          min: 1
+          name: port
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database name
+            ja_JP: Database name
+            pt_BR: Database name
+            zh_Hans: 数据库名称
+          label:
+            en_US: Database name
+            ja_JP: Database name
+            pt_BR: Database name
+            zh_Hans: 数据库名称
+          llm_description: Database name
+          max: null
+          min: null
+          name: db_name
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Username
+            ja_JP: Username
+            pt_BR: Username
+            zh_Hans: 用户名
+          label:
+            en_US: Username
+            ja_JP: Username
+            pt_BR: Username
+            zh_Hans: 用户名
+          llm_description: Username
+          max: null
+          min: null
+          name: username
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Password
+            ja_JP: Password
+            pt_BR: Password
+            zh_Hans: 密码
+          label:
+            en_US: Password
+            ja_JP: Password
+            pt_BR: Password
+            zh_Hans: 密码
+          llm_description: Password
+          max: null
+          min: null
+          name: password
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: secret-input
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Fetching data from the database using natural language.
+            ja_JP: Fetching data from the database using natural language.
+            pt_BR: Fetching data from the database using natural language.
+            zh_Hans: Fetching data from the database using natural language.
+          label:
+            en_US: SQL string
+            ja_JP: SQL string
+            pt_BR: SQL string
+            zh_Hans: 待执行的 SQL 语句
+          llm_description: Fetching data from the database using natural language.
+          max: null
+          min: null
+          name: sql
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        params:
+          db_name: ''
+          db_type: ''
+          host: ''
+          password: ''
+          port: ''
+          sql: ''
+          username: ''
+        provider_id: jaguarliuu/rookie_text2data/rookie_text2data
+        provider_name: jaguarliuu/rookie_text2data/rookie_text2data
+        provider_type: builtin
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: rookie_excute_sql
+        tool_configurations:
+          db_name: yolo
+          db_type: mysql
+          host: host.docker.internal
+          password: 125521sixsix
+          port: 3306
+          result_format: text
+          username: root
+        tool_label: rookie_excute_sql
+        tool_name: rookie_excute_sql
+        tool_parameters:
+          schema:
+            type: mixed
+            value: ''
+          sql:
+            type: mixed
+            value: '{{#1743662929844.text#}}'
+        type: tool
+      height: 310
+      id: '1742881171324'
+      position:
+        x: 386.67163724379225
+        y: 398.81229211385426
+      positionAbsolute:
+        x: 386.67163724379225
+        y: 398.81229211385426
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: contains
+            id: 461235d3-716d-4dfa-9b4c-77dbbe7912a4
+            value: chart
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: 'true'
+          logical_operator: and
+        - case_id: 87e1ae86-a74c-4cea-996f-3388eced0c80
+          conditions:
+          - comparison_operator: contains
+            id: 0530c8c8-5066-43e6-b309-32939d2b3ee8
+            value: WORD
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 948a09d2-7364-4006-a123-bca81cdd3e3f
+            value: word
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 894c9d50-69cc-4deb-8440-163264c0c63f
+            value: Word
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: 87e1ae86-a74c-4cea-996f-3388eced0c80
+          logical_operator: or
+        - case_id: 561d7ebd-290f-4b9d-bbe8-5092ddf785aa
+          conditions:
+          - comparison_operator: contains
+            id: c8899bfd-b18e-4b52-88cf-d32f4b7a122b
+            value: PDF
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 2f4c175b-8044-4324-b071-ac2ae7b36165
+            value: pdf
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: 561d7ebd-290f-4b9d-bbe8-5092ddf785aa
+          logical_operator: or
+        - case_id: 25426991-f7b1-4b41-b1af-db0c173ac727
+          conditions:
+          - comparison_operator: contains
+            id: cd802d87-9e62-4bef-a2ab-aadda93a6152
+            value: html
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          - comparison_operator: contains
+            id: 5f8af581-0d63-44cd-8ac9-fdc3ace28834
+            value: HTML
+            varType: string
+            variable_selector:
+            - sys
+            - query
+          id: 25426991-f7b1-4b41-b1af-db0c173ac727
+          logical_operator: or
+        desc: ''
+        selected: false
+        title: Conditional Selection
+        type: if-else
+      height: 374
+      id: '1743045229587'
+      position:
+        x: 677.4874118047071
+        y: 398.81229211385426
+      positionAbsolute:
+        x: 677.4874118047071
+        y: 398.81229211385426
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1750320697531.text#}}'
+        desc: ''
+        selected: false
+        title: 'chart output '
+        type: answer
+        variables: []
+      height: 104
+      id: '1743047486499'
+      position:
+        x: 1986.9293658492425
+        y: -404.9573515086942
+      positionAbsolute:
+        x: 1986.9293658492425
+        y: -404.9573515086942
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: glm-4.5-flash
+          provider: langgenius/zhipuai/zhipuai
+        prompt_template:
+        - id: 7ee0c95d-88ef-4e24-852a-84638779b6c3
+          role: system
+          text: '#Task
+
+            Based on user needs and data content, independently determine which chart
+            type is suitable
+
+            #Output
+
+            Only output the chart type name you recommend, choose one of the following
+            chart types to output: bar chart, line chart, pie chart, scatter plot,
+            scatter (bubble) chart with ripple effect animation, K-line chart, radar
+            chart, heatmap, tree chart, rectangular tree chart, sunrise chart, map,
+            path chart'
+        - id: 877920da-3208-49b1-8d05-fbcae2fe7d7a
+          role: user
+          text: 'User requirements:{{#sys.query#}}
+
+            Data contents：{{#1742881171324.text#}}'
+        selected: false
+        title: chart type discriminator
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 96
+      id: '1743146693834'
+      position:
+        x: 973.2457000424188
+        y: -404.9573515086942
+      positionAbsolute:
+        x: 973.2457000424188
+        y: -404.9573515086942
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database type
+            ja_JP: Database type
+            pt_BR: Database type
+            zh_Hans: 数据库类型
+          label:
+            en_US: Database type
+            ja_JP: Database type
+            pt_BR: Database type
+            zh_Hans: 数据库类型
+          llm_description: Database type
+          max: null
+          min: null
+          name: db_type
+          options:
+          - label:
+              en_US: MySQL
+              ja_JP: MySQL
+              pt_BR: MySQL
+              zh_Hans: MySQL
+            value: mysql
+          - label:
+              en_US: PostgreSQL
+              ja_JP: PostgreSQL
+              pt_BR: PostgreSQL
+              zh_Hans: PostgreSQL
+            value: postgresql
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: limit
+            ja_JP: limit
+            pt_BR: limit
+            zh_Hans: SQL返回数据量限制
+          label:
+            en_US: limit
+            ja_JP: limit
+            pt_BR: limit
+            zh_Hans: SQL返回数据量限制
+          llm_description: limit
+          max: 1000
+          min: 1
+          name: limit
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: json
+          form: form
+          human_description:
+            en_US: result_format
+            ja_JP: result_format
+            pt_BR: result_format
+            zh_Hans: 返回数据格式
+          label:
+            en_US: result_format
+            ja_JP: result_format
+            pt_BR: result_format
+            zh_Hans: 返回数据格式
+          llm_description: result_format
+          max: null
+          min: null
+          name: result_format
+          options:
+          - label:
+              en_US: JSON
+              ja_JP: JSON
+              pt_BR: JSON
+              zh_Hans: JSON
+            value: json
+          - label:
+              en_US: TEXT
+              ja_JP: TEXT
+              pt_BR: TEXT
+              zh_Hans: TEXT
+            value: text
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database ip/host
+            ja_JP: Database ip/host
+            pt_BR: Database ip/host
+            zh_Hans: 数据库IP/域名
+          label:
+            en_US: Database ip/host
+            ja_JP: Database ip/host
+            pt_BR: Database ip/host
+            zh_Hans: 数据库IP/域名
+          llm_description: Database ip/host
+          max: null
+          min: null
+          name: host
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database port
+            ja_JP: Database port
+            pt_BR: Database port
+            zh_Hans: 数据库端口
+          label:
+            en_US: Database port
+            ja_JP: Database port
+            pt_BR: Database port
+            zh_Hans: 数据库端口
+          llm_description: Database port
+          max: 65535
+          min: 1
+          name: port
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Database name
+            ja_JP: Database name
+            pt_BR: Database name
+            zh_Hans: 数据库名称
+          label:
+            en_US: Database name
+            ja_JP: Database name
+            pt_BR: Database name
+            zh_Hans: 数据库名称
+          llm_description: Database name
+          max: null
+          min: null
+          name: db_name
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: table_names
+            ja_JP: table_names
+            pt_BR: table_names
+            zh_Hans: 数据表名称
+          label:
+            en_US: table_names
+            ja_JP: table_names
+            pt_BR: table_names
+            zh_Hans: 数据表名称
+          llm_description: table_names
+          max: null
+          min: null
+          name: table_names
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Username
+            ja_JP: Username
+            pt_BR: Username
+            zh_Hans: 用户名
+          label:
+            en_US: Username
+            ja_JP: Username
+            pt_BR: Username
+            zh_Hans: 用户名
+          llm_description: Username
+          max: null
+          min: null
+          name: username
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Password
+            ja_JP: Password
+            pt_BR: Password
+            zh_Hans: 密码
+          label:
+            en_US: Password
+            ja_JP: Password
+            pt_BR: Password
+            zh_Hans: 密码
+          llm_description: Password
+          max: null
+          min: null
+          name: password
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: secret-input
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: LLM model for text2data.
+            ja_JP: LLM model for text2data.
+            pt_BR: LLM model for text2data.
+            zh_Hans: LLM model for text2data.
+          label:
+            en_US: Model
+            ja_JP: Model
+            pt_BR: Model
+            zh_Hans: 模型
+          llm_description: LLM model for text2data.
+          max: null
+          min: null
+          name: model
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: llm
+          template: null
+          type: model-selector
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Fetching data from the database using natural language.
+            ja_JP: Fetching data from the database using natural language.
+            pt_BR: Fetching data from the database using natural language.
+            zh_Hans: Fetching data from the database using natural language.
+          label:
+            en_US: Query string
+            ja_JP: Query string
+            pt_BR: Query string
+            zh_Hans: 查询语句
+          llm_description: Fetching data from the database using natural language.
+          max: null
+          min: null
+          name: query
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: custom_prompt
+            ja_JP: custom_prompt
+            pt_BR: custom_prompt
+            zh_Hans: 自定义提示
+          label:
+            en_US: custom_prompt
+            ja_JP: custom_prompt
+            pt_BR: custom_prompt
+            zh_Hans: 自定义提示
+          llm_description: custom_prompt
+          max: null
+          min: null
+          name: custom_prompt
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: with_comment
+            ja_JP: with_comment
+            pt_BR: with_comment
+            zh_Hans: 是否包含注释
+          label:
+            en_US: with_comment
+            ja_JP: with_comment
+            pt_BR: with_comment
+            zh_Hans: 是否包含注释
+          llm_description: with_comment
+          max: null
+          min: null
+          name: with_comment
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        params:
+          custom_prompt: ''
+          db_name: ''
+          db_type: ''
+          host: ''
+          limit: ''
+          model: ''
+          password: ''
+          port: ''
+          query: ''
+          result_format: ''
+          table_names: ''
+          username: ''
+          with_comment: ''
+        provider_id: jaguarliuu/rookie_text2data/rookie_text2data
+        provider_name: jaguarliuu/rookie_text2data/rookie_text2data
+        provider_type: builtin
+        selected: false
+        title: rookie_text2data
+        tool_configurations:
+          db_name: yolo
+          db_type: mysql
+          host: host.docker.internal
+          limit: 999
+          model:
+            completion_params: {}
+            mode: chat
+            model: qwen-turbo-latest
+            model_type: llm
+            provider: langgenius/tongyi/tongyi
+            type: model-selector
+          password: 125521sixsix
+          port: 3306
+          result_format: text
+          username: root
+          with_comment: 0
+        tool_label: rookie_text2data
+        tool_name: rookie_text2data
+        tool_parameters:
+          custom_prompt:
+            type: mixed
+            value: ''
+          query:
+            type: mixed
+            value: '{{#1743664802540.text#}}'
+          table_names:
+            type: mixed
+            value: yolo parameters table
+        type: tool
+      height: 324
+      id: '1743662929844'
+      position:
+        x: 44.940864429978944
+        y: 398.81229211385426
+      positionAbsolute:
+        x: 44.940864429978944
+        y: 398.81229211385426
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params: {}
+          mode: chat
+          name: deepseek-v3
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: e5d4196f-30cd-4763-bbf9-52b24ac837bb
+          role: system
+          text: '#Role
+
+            You are an expert in text extraction
+
+            #Task
+
+            Responsible for extracting, summarizing, and capturing key data query
+            text from users'' query data requirements, removing irrelevant content
+            such as generating charts, Excel, and forms, and retaining only the text
+            used for extracting query data
+
+            #Output
+
+            Only output the results you have extracted, no further words are needed'
+        - id: 28fe0013-8977-4c4c-bf7f-b0fc59c96cba
+          role: user
+          text: User's query data requirements:{{#sys.query#}}
+        selected: false
+        title: User Requirements Refiner
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1743664802540'
+      position:
+        x: -263.7946158934235
+        y: 398.81229211385426
+      positionAbsolute:
+        x: -263.7946158934235
+        y: 398.81229211385426
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: LLM model for rookie_data_alchemy.
+            ja_JP: LLM model for rookie_data_alchemy.
+            pt_BR: LLM model for rookie_data_alchemy.
+            zh_Hans: LLM model for rookie_data_alchemy.
+          label:
+            en_US: Model
+            ja_JP: Model
+            pt_BR: Model
+            zh_Hans: 模型
+          llm_description: LLM model for text2data.
+          max: null
+          min: null
+          name: model
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: llm
+          template: null
+          type: model-selector
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: wait for data
+            ja_JP: wait for data
+            pt_BR: wait for data
+            zh_Hans: 待处理的数据，建议为json格式或md
+          label:
+            en_US: data
+            ja_JP: data
+            pt_BR: data
+            zh_Hans: 待处理的数据，建议为json格式或md
+          llm_description: wait for data
+          max: null
+          min: null
+          name: data
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: title
+            ja_JP: title
+            pt_BR: title
+            zh_Hans: 图表标题，不填则大模型推理生成
+          label:
+            en_US: title
+            ja_JP: title
+            pt_BR: title
+            zh_Hans: 图表标题，不填则大模型推理生成
+          llm_description: title
+          max: null
+          min: null
+          name: title
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: chart type
+            ja_JP: chart type
+            pt_BR: chart type
+            zh_Hans: 图表类型
+          label:
+            en_US: chart type
+            ja_JP: chart type
+            pt_BR: chart type
+            zh_Hans: 图表类型
+          llm_description: chart type
+          max: null
+          min: null
+          name: chart_type
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: custom requirements
+            ja_JP: custom requirements
+            pt_BR: custom requirements
+            zh_Hans: 自定义需求
+          label:
+            en_US: custom requirements
+            ja_JP: custom requirements
+            pt_BR: custom requirements
+            zh_Hans: 自定义需求
+          llm_description: custom requirements
+          max: null
+          min: null
+          name: custom_requirements
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          chart_type: ''
+          custom_requirements: ''
+          data: ''
+          model: ''
+          title: ''
+        provider_id: jaguarliuu/rookie_data_alchemy/rookie_data_alchemy
+        provider_name: jaguarliuu/rookie_data_alchemy/rookie_data_alchemy
+        provider_type: builtin
+        selected: false
+        title: rookie_data_alchemy
+        tool_configurations:
+          model:
+            completion_params: {}
+            mode: chat
+            model: glm-4.5-flash
+            model_type: llm
+            provider: langgenius/zhipuai/zhipuai
+            type: model-selector
+        tool_description: Visualizing structured data as charts
+        tool_label: rookie_data_alchemy
+        tool_name: rookie_data_alchemy
+        tool_parameters:
+          chart_type:
+            type: mixed
+            value: '{{#1743146693834.text#}}'
+          custom_requirements:
+            type: mixed
+            value: '1. The style and size of the chart should be just right, exquisite
+
+              2. Each color in the chart requires a noun annotation
+
+              3. The horizontal axis represents the YOLO version, and the vertical
+              axis represents time
+
+              4. The display range of the vertical axis is from 2015 to 2025'
+          data:
+            type: mixed
+            value: '{{#1752893057157.text#}}'
+          title:
+            type: mixed
+            value: ''
+        type: tool
+      height: 90
+      id: '1750320697531'
+      position:
+        x: 1565.3024325337983
+        y: -391.9319283717308
+      positionAbsolute:
+        x: 1565.3024325337983
+        y: -391.9319283717308
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: glm-4-long
+          provider: langgenius/zhipuai/zhipuai
+        prompt_template:
+        - id: 18f135f3-2546-48cb-b17c-801c0a896779
+          role: system
+          text: '#Task
+
+            Convert database data into table type markdown text content and translate
+            the header into Chinese
+
+            #Output
+
+            Only output the markdown of the converted table type, without language
+            labels such as'' markdown \ n '', and only output the standard markdwon
+            table'
+        - id: 29bbbd96-a7a7-4847-933e-2e56b2418dea
+          role: user
+          text: Data in the database:{{#1742881171324.text#}}
+        selected: false
+        title: markdown to WORD
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 96
+      id: '1752739897988'
+      position:
+        x: 1055.9720465720375
+        y: 164.77989605069197
+      positionAbsolute:
+        x: 1055.9720465720375
+        y: 164.77989605069197
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          label:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Filename of the output file
+            ja_JP: Filename of the output file
+            pt_BR: Filename of the output file
+            zh_Hans: 输出文件名
+          label:
+            en_US: Filename of the output file
+            ja_JP: Filename of the output file
+            pt_BR: Filename of the output file
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: Markdown to DOCX
+        tool_configurations: {}
+        tool_description: 将 Markdown 转换为 DOCX 文件的工具
+        tool_label: Markdown 转 DOCX 文件
+        tool_name: md_to_docx
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1752739897988.text#}}'
+        type: tool
+      height: 54
+      id: '1752740030034'
+      position:
+        x: 1343.5219117244756
+        y: 164.77989605069197
+      positionAbsolute:
+        x: 1343.5219117244756
+        y: 164.77989605069197
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: This is a file generated based on your requirements:{{#1752740030034.files#}}
+        desc: ''
+        selected: false
+        title: WORD Generated
+        type: answer
+        variables: []
+      height: 136
+      id: '1752740052565'
+      position:
+        x: 1701.493547491394
+        y: 164.77989605069197
+      positionAbsolute:
+        x: 1701.493547491394
+        y: 164.77989605069197
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: glm-4-long
+          provider: langgenius/zhipuai/zhipuai
+        prompt_template:
+        - id: 3c1d2150-427b-4634-b074-7b9de0cf99b1
+          role: system
+          text: '#Task
+
+            Convert database data into table type markdown text content and translate
+            the header into Chinese
+
+            #Output
+
+            Only output the markdown of the converted table type, without language
+            labels such as'' markdown \ n '', and only output the standard markdwon
+            table'
+        - id: 8faf200a-a921-4d6b-aa24-5515388b0974
+          role: user
+          text: Data in the database:{{#1742881171324.text#}}
+        selected: false
+        title: markdown to pdf
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 96
+      id: '1752740299656'
+      position:
+        x: 1019.9615985712571
+        y: 372.54032842281913
+      positionAbsolute:
+        x: 1019.9615985712571
+        y: 372.54032842281913
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          label:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Filename of the output file
+            ja_JP: Filename of the output file
+            pt_BR: Filename of the output file
+            zh_Hans: 输出文件名
+          label:
+            en_US: Filename of the output file
+            ja_JP: Filename of the output file
+            pt_BR: Filename of the output file
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: Markdown to PDF
+        tool_configurations: {}
+        tool_description: 将 Markdown 转换为 PDF 文件的工具
+        tool_label: Markdown 转 PDF 文件
+        tool_name: md_to_pdf
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1752740299656.text#}}'
+        type: tool
+      height: 54
+      id: '1752740376952'
+      position:
+        x: 1322.2204974446652
+        y: 372.54032842281913
+      positionAbsolute:
+        x: 1322.2204974446652
+        y: 372.54032842281913
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: This is a file generated based on your requirements:{{#1752740376952.files#}}
+        desc: ''
+        selected: false
+        title: pdf Generated
+        type: answer
+        variables: []
+      height: 136
+      id: '1752740400749'
+      position:
+        x: 1615.7738906851116
+        y: 372.54032842281913
+      positionAbsolute:
+        x: 1615.7738906851116
+        y: 372.54032842281913
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: glm-4-long
+          provider: langgenius/zhipuai/zhipuai
+        prompt_template:
+        - id: af136a6c-c42d-4f5f-84b1-733c06fc6069
+          role: system
+          text: '#Task
+
+            Convert database data into table type markdown text content and translate
+            the header into Chinese
+
+            #Output
+
+            Only output the markdown of the converted table type, without language
+            labels such as'' markdown \ n '', and only output the standard markdwon
+            table'
+        - id: 4a6ea38f-d7d1-44ed-b1cb-26e6ebcdc0cb
+          role: user
+          text: Data in the database:{{#1742881171324.text#}}
+        selected: false
+        title: markdown to HTML
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 96
+      id: '1752740533022'
+      position:
+        x: 1012.9971940648886
+        y: 591.919070373442
+      positionAbsolute:
+        x: 1012.9971940648886
+        y: 591.919070373442
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          label:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Filename of the output file
+            ja_JP: Filename of the output file
+            pt_BR: Filename of the output file
+            zh_Hans: 输出文件名
+          label:
+            en_US: Filename of the output file
+            ja_JP: Filename of the output file
+            pt_BR: Filename of the output file
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: Markdown to HTML
+        tool_configurations: {}
+        tool_description: 将 Markdown 转换为 HTML 文件的工具
+        tool_label: Markdown 转 HTML 文件
+        tool_name: md_to_html
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1752740533022.text#}}'
+        type: tool
+      height: 54
+      id: '1752740612501'
+      position:
+        x: 1306.550587305335
+        y: 591.919070373442
+      positionAbsolute:
+        x: 1306.550587305335
+        y: 591.919070373442
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: This is a file generated based on your requirements:{{#1752740612501.files#}}
+        desc: ''
+        selected: false
+        title: HTML  Generated
+        type: answer
+        variables: []
+      height: 136
+      id: '1752740629292'
+      position:
+        x: 1615.7738906851116
+        y: 591.919070373442
+      positionAbsolute:
+        x: 1615.7738906851116
+        y: 591.919070373442
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: SQL execution failed, please try again!
+        desc: ''
+        selected: false
+        title: SQL execution failed
+        type: answer
+        variables: []
+      height: 118
+      id: '1752742931945'
+      position:
+        x: 677.4874118047071
+        y: 948.4412922873041
+      positionAbsolute:
+        x: 677.4874118047071
+        y: 948.4412922873041
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: glm-4.5-flash
+          provider: langgenius/zhipuai/zhipuai
+        prompt_template:
+        - id: 6362878e-0c27-4c4f-a01c-a6bb955541a3
+          role: system
+          text: Extract icon names from user input and only output chart names
+        - id: 5ebc7c12-ddf9-4390-89a0-bc97b95063f4
+          role: user
+          text: User input：{{#sys.query#}}
+        selected: false
+        title: Chart Name Naming
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 96
+      id: '1752892995530'
+      position:
+        x: 1002.5505873053348
+        y: -234.24693479508835
+      positionAbsolute:
+        x: 1002.5505873053348
+        y: -234.24693479508835
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: a string with json
+            ja_JP: a string with json
+            pt_BR: a string with json
+            zh_Hans: 请输入带json的字符串
+          label:
+            en_US: a string with json
+            ja_JP: a string with json
+            pt_BR: a string with json
+            zh_Hans: 带json的字符串
+          llm_description: 一个提取json并修复json的工具
+          max: null
+          min: null
+          name: string
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        params:
+          string: ''
+        provider_id: lefenghx/json_get_fix/json_get_fix
+        provider_name: lefenghx/json_get_fix/json_get_fix
+        provider_type: builtin
+        selected: false
+        title: json_get_fix
+        tool_configurations: {}
+        tool_description: 一个提取json并修复json的工具
+        tool_label: json_get_fix
+        tool_name: json_get_fix
+        tool_parameters:
+          string:
+            type: mixed
+            value: '{{#1742881171324.text#}}'
+        type: tool
+      height: 54
+      id: '1752893057157'
+      position:
+        x: 1031.4959720541422
+        y: -89.6849571707155
+      positionAbsolute:
+        x: 1031.4959720541422
+        y: -89.6849571707155
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: 322.26361324162184
+      y: 199.4944303384308
+      zoom: 0.41748549439133836
