@@ -13,9 +13,16 @@ https://github.com/user-attachments/assets/ffcd5b93-306d-410d-99ed-4a97cf8b9da8
 <img width="2160" height="1516" alt="Fig 1" src="https://github.com/user-attachments/assets/e1791ebf-dd03-4d7e-9854-5e645c14d064" />
 Fig.1 The Agent-Based LLMs Evaluator consists of three key modules. The 'Database Integration' module, shown in green, stores and organizes model data for evaluation, using MySQL for management. The 'Agentic AI Applications' module, in red, based on Dify architecture, enables agent-database interaction for data query and update. The 'Agent Interaction Model Design' module, colored purple, designs chat - based evaluation processes, generating visualizations and data outputs to enhance user experience.
 
+
+
+
 ABSTRACT
 An agent-based evaluator framework, termed ABLE (Agent-Based LLMs Evaluator), is proposed to automate deep learning model assessment through natural language interaction and structured database integration. Built on the Dify platform, ABLE leverages large language models to interpret user queries, retrieve evaluation data, and generate graphical or document-based outputs. A MySQL–Navicat database enables traceable management of model attributes and metrics, while Chatflow facilitates context-aware interactions. The evaluator's effectiveness is validated using YOLOv1 to YOLOv13, with comparative LLMs performance analysis between DeepSeek V3 and Qwen-Turbo-Latest. ABLE demonstrates extensibility, interpretability, and adaptability, offering a generalizable paradigm for intelligent and user-centric model evaluation across scientific and industrial domains.
+
 Keywords: Agent-Based Evaluation; Large Language Models (LLMs); YOLO Object Detection; Conversational AI Framework; Structured Model Benchmarking
+
+
+
 
 <img width="1107" height="650" alt="image" src="https://github.com/user-attachments/assets/5ce817b2-2e27-444b-a090-b77a5cb5c997" />
 Fig.2 Integrated MySQL-Navicat Database Architecture for Structured Management of Deep Learning Model Metadata and Evaluation Parameters in ABLE
