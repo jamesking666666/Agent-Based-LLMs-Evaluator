@@ -1,5 +1,6 @@
 Agent-Based LLMs Evaluator: Leveraging LLMs to Design an Advanced Agent-Based Evaluator for Deep Learning Models
-![Uploading image.png…]()
+<img width="2160" height="1516" alt="Fig 1" src="https://github.com/user-attachments/assets/e1791ebf-dd03-4d7e-9854-5e645c14d064" />
+
 
 ABSTRACT
 An agent-based evaluator framework, termed ABLE (Agent-Based LLMs Evaluator), is proposed to automate deep learning model assessment through natural language interaction and structured database integration. Built on the Dify platform, ABLE leverages large language models to interpret user queries, retrieve evaluation data, and generate graphical or document-based outputs. A MySQL–Navicat database enables traceable management of model attributes and metrics, while Chatflow facilitates context-aware interactions. The evaluator's effectiveness is validated using YOLOv1 to YOLOv13, with comparative LLMs performance analysis between DeepSeek V3 and Qwen-Turbo-Latest. ABLE demonstrates extensibility, interpretability, and adaptability, offering a generalizable paradigm for intelligent and user-centric model evaluation across scientific and industrial domains.
