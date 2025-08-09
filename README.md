@@ -2,6 +2,10 @@ Agent-Based LLMs Evaluator: Leveraging LLMs to Design an Advanced Agent-Based Ev
 Agent Based LLMs Evaluator.yml can be opened in the Dify framework, and the running results are as follows:
 
 
+https://github.com/user-attachments/assets/86049ca1-7d7f-432e-9f0d-d5e7277ab902
+
+
+
 
 
 <img width="2160" height="1516" alt="Fig 1" src="https://github.com/user-attachments/assets/e1791ebf-dd03-4d7e-9854-5e645c14d064" />
