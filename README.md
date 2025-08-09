@@ -38,6 +38,18 @@ Fig.7 Evolutionary Trajectory of YOLO Architectures from v1 to v13: Structural A
 <img width="1107" height="740" alt="image" src="https://github.com/user-attachments/assets/bc0c3cb9-9d04-4d64-8a1f-28cb7e791bc4" />
 Fig. 8 Comparative Evaluation of LLM-Based Agents on YOLO Model Analysis: Reasoning Depth, Interpretability, and Response Effectiveness
 
+Q2: Check the data of YOLO version and analyze the overall development of YOLO.
+
+
+https://github.com/user-attachments/assets/0cadf894-9e18-4164-8747-ccd45c2c8f93
+
+
+
+
+https://github.com/user-attachments/assets/0f2d2f54-b0d7-45a6-8193-ca32f8d04386
+
+
+
 <img width="1111" height="682" alt="image" src="https://github.com/user-attachments/assets/43426b44-2d97-4992-9c84-aad74cce82ba" />
 Fig. 9 Comparative token utilization (a) and inference time of DeepSeek V3 and Qwen-Turbo-Latest across multi-step agentic evaluation tasks (b)
 
