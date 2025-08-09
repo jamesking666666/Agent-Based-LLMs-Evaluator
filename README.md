@@ -3,6 +3,18 @@ Agent Based LLMs Evaluator.yml can be opened in the Dify framework, and the runn
 
 
 
+https://github.com/user-attachments/assets/06067072-ca79-407d-a8e8-a53827a8eb52
+
+
+
+https://github.com/user-attachments/assets/6ed2c356-c28c-4870-bfef-59222dd7ed3b
+
+
+
+https://github.com/user-attachments/assets/11eb5203-7fc1-4dcc-9115-dc5c0f2e4bf5
+
+
+
 <img width="2160" height="1516" alt="Fig 1" src="https://github.com/user-attachments/assets/e1791ebf-dd03-4d7e-9854-5e645c14d064" />
 Fig.1 The Agent-Based LLMs Evaluator consists of three key modules. The 'Database Integration' module, shown in green, stores and organizes model data for evaluation, using MySQL for management. The 'Agentic AI Applications' module, in red, based on Dify architecture, enables agent-database interaction for data query and update. The 'Agent Interaction Model Design' module, colored purple, designs chat - based evaluation processes, generating visualizations and data outputs to enhance user experience.
 
