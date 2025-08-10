@@ -1,6 +1,18 @@
 Agent-Based LLMs Evaluator: Leveraging LLMs to Design an Advanced Agent-Based Evaluator for Deep Learning Models.
 =
 
+ABSTRACT
+-
+An agent-based evaluator framework, termed ABLE (Agent-Based LLMs Evaluator), is proposed to automate deep learning model assessment through natural language interaction and structured database integration. Built on the Dify platform, ABLE leverages large language models to interpret user queries, retrieve evaluation data, and generate graphical or document-based outputs. A MySQL–Navicat database enables traceable management of model attributes and metrics, while Chatflow facilitates context-aware interactions. The evaluator's effectiveness is validated using YOLOv1 to YOLOv13, with comparative LLMs performance analysis between DeepSeek V3 and Qwen-Turbo-Latest. ABLE demonstrates extensibility, interpretability, and adaptability, offering a generalizable paradigm for intelligent and user-centric model evaluation across scientific and industrial domains.
+
+Keywords:
+-
+Agent-Based Evaluation; Large Language Models (LLMs); YOLO Object Detection; Conversational AI Framework; Structured Model Benchmarking
+
+
+
+
+
 "Agent Based LLMs Evaluator.yml" can be imported as DSL file in the Dify framework, and the running results are as follows:
 
 Q1：Check the release times of YOLOv1 to YOLOv13 versions and generate a bar chart.
@@ -17,10 +29,7 @@ Fig.1 The Agent-Based LLMs Evaluator consists of three key modules. The 'Databas
 
 
 
-ABSTRACT
-An agent-based evaluator framework, termed ABLE (Agent-Based LLMs Evaluator), is proposed to automate deep learning model assessment through natural language interaction and structured database integration. Built on the Dify platform, ABLE leverages large language models to interpret user queries, retrieve evaluation data, and generate graphical or document-based outputs. A MySQL–Navicat database enables traceable management of model attributes and metrics, while Chatflow facilitates context-aware interactions. The evaluator's effectiveness is validated using YOLOv1 to YOLOv13, with comparative LLMs performance analysis between DeepSeek V3 and Qwen-Turbo-Latest. ABLE demonstrates extensibility, interpretability, and adaptability, offering a generalizable paradigm for intelligent and user-centric model evaluation across scientific and industrial domains.
 
-Keywords: Agent-Based Evaluation; Large Language Models (LLMs); YOLO Object Detection; Conversational AI Framework; Structured Model Benchmarking
 
 
 
