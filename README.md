@@ -78,6 +78,11 @@ https://github.com/user-attachments/assets/6a7e3827-7b06-458c-892d-5e51d1e0699a
 <img width="1107" height="740" alt="image" src="https://github.com/user-attachments/assets/bc0c3cb9-9d04-4d64-8a1f-28cb7e791bc4" />
 Fig. 8 Comparative Evaluation of LLM-Based Agents on YOLO Model Analysis: Reasoning Depth, Interpretability, and Response Effectiveness
 
+Q3:Please evaluate these 10 papers related to deep learning YOLO series models, why are they cited so much? Meanwhile, provide some suggestions on how to design YOLO models that will attract widespread attention from researchers?
+-
+
+
+
 
 
 https://github.com/user-attachments/assets/2f96c56f-d5b6-4c67-82b3-968bf316b77a
