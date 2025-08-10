@@ -49,6 +49,8 @@ Fig.7 Evolutionary Trajectory of YOLO Architectures from v1 to v13: Structural A
 
 
 Q2: Check the data of YOLO version and analyze the overall development of YOLO.
+-
+
 
 
 https://github.com/user-attachments/assets/0cadf894-9e18-4164-8747-ccd45c2c8f93
