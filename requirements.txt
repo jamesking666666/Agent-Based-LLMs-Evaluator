@@ -1,0 +1,8 @@
+Docker == 4.39.0
+Dify == 1.4.2
+mysql == 8.0.42.0
+MySQL Shell == 8.0.42
+Navicat == 16.3.9
+rookie_data_alchemy == 0.0.4
+Markdown Exporte == 1.8.0
+rookie_text2data ==  0.3.1
