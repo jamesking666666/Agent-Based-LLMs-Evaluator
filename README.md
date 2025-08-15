@@ -1,14 +1,13 @@
-Agent-Based LLMs Evaluator: Leveraging LLMs to Design an Advanced Agent-Based Evaluator for Deep Learning Models.
+Agent-Based LLM Evaluator: Leveraging LLMs to Design an Advanced Agent-Based Evaluator for Deep Learning Models.
 =
 
 ABSTRACT
 -
-An agent-based evaluator framework, termed ABLE (Agent-Based LLMs Evaluator), is proposed to automate deep learning model assessment through natural language interaction and structured database integration. Built on the Dify platform, ABLE leverages large language models to interpret user queries, retrieve evaluation data, and generate graphical or document-based outputs. A MySQL–Navicat database enables traceable management of model attributes and metrics, while Chatflow facilitates context-aware interactions. The evaluator's effectiveness is validated using YOLOv1 to YOLOv13, with comparative LLMs performance analysis between DeepSeek V3 and Qwen-Turbo-Latest. ABLE demonstrates extensibility, interpretability, and adaptability, offering a generalizable paradigm for intelligent and user-centric model evaluation across scientific and industrial domains.
+An agent-based evaluator framework, termed the agent-based Large Language Models (LLMs) evaluator (ABLE), is proposed to automate deep learning model assessment through natural language interaction and structured database integration. Built on the Dify platform, ABLE leverages large language models to interpret user queries, retrieve evaluation data, and generate graphical or document-based outputs. A MySQL–Navicat database enables traceable management of model attributes and metrics, and ChatFlow facilitates context-aware interactions. The effectiveness of the evaluator is validated by using YOLOv1 to YOLOv13, with a comparative LLM performance analysis with DeepSeek V3 and Qwen-Turbo-Latest. ABLE demonstrates extensibility, interpretability, and adaptability and offers a generalizable paradigm for intelligent and user-centric model evaluation across scientific and industrial domains.
 
 Keywords:
 -
 Agent-Based Evaluation; Large Language Models (LLMs); YOLO Object Detection; Conversational AI Framework; Structured Model Benchmarking
-
 
 
 
@@ -24,7 +23,7 @@ https://github.com/user-attachments/assets/ffcd5b93-306d-410d-99ed-4a97cf8b9da8
 
 
 <img width="2160" height="1516" alt="Fig 1" src="https://github.com/user-attachments/assets/e1791ebf-dd03-4d7e-9854-5e645c14d064" />
-Fig.1 The Agent-Based LLMs Evaluator consists of three key modules. The 'Database Integration' module, shown in green, stores and organizes model data for evaluation, using MySQL for management. The 'Agentic AI Applications' module, in red, based on Dify architecture, enables agent-database interaction for data query and update. The 'Agent Interaction Model Design' module, colored purple, designs chat - based evaluation processes, generating visualizations and data outputs to enhance user experience.
+Fig. 1 The agent-based LLM evaluator consists of three key modules. The 'Database Integration' module, which is shown in green, stores and organizes model data for evaluation and uses MySQL for management. The 'Agentic AI Applications' module, which is shown in red and is based on the Dify architecture, enables agent–database interaction for data query and update. The 'Agent Interaction Model Design' module, which is shown in purple, designs chat-based evaluation processes and generates visualizations and data outputs to enhance the user experience.
 
 
 
@@ -35,25 +34,24 @@ Fig.1 The Agent-Based LLMs Evaluator consists of three key modules. The 'Databas
 
 
 <img width="1107" height="650" alt="image" src="https://github.com/user-attachments/assets/5ce817b2-2e27-444b-a090-b77a5cb5c997" />
-Fig.2 Integrated MySQL-Navicat Database Architecture for Structured Management of Deep Learning Model Metadata and Evaluation Parameters in ABLE
+Fig. 2 Integrated MySQL–Navicat database architecture for the structured management of deep learning model metadata and the evaluation of parameters in ABLE
 
 
 <img width="1108" height="651" alt="image" src="https://github.com/user-attachments/assets/1400f930-60fa-4f12-849d-7354ee1d420e" />
-Fig.3 Modular Architecture of Agent-Based AI Solutions within the ABLE Framework: Enabling Natural Language Interaction, Intelligent Query Processing, and Customized Evaluation Outputs for Deep Learning Models
+Fig. 3 Modular architecture of agent-based AI solutions within the ABLE framework: Enabling natural language interaction, intelligent query processing, and customized evaluation outputs for deep learning models
 
 
 <img width="1108" height="541" alt="image" src="https://github.com/user-attachments/assets/2ce70dbc-aefa-458c-8718-760157f7f36b" />
-Fig.4 Conversational Interaction Architecture Based on Chatflow: A Modular Agent Design for Deep Learning Model Evaluation in the ABLE Framework
+Fig. 4 Conversational interaction architecture that is based on ChatFlow: A modular agent design for deep learning model evaluation in the ABLE framework
 
 <img width="932" height="599" alt="image" src="https://github.com/user-attachments/assets/071f8cfb-c84d-4093-a809-31da9f430e48" />
-
-Fig.5 Structural overview of the Agent-Based LLMs Evaluator, comprising three interrelated modules: (1) graphical visualization for intuitive performance interpretation, (2) a comprehensive case study of YOLO models from v1 to v13, and (3) a benchmarking methodology designed to compare model metrics and literature standards. This modular design enhances analytical depth, user interactivity, and evaluation generalizability across different deep learning architectures.
+Fig. 5 Structural overview of the agent-based LLM evaluator, which comprises three interrelated modules: (1) graphical visualization for intuitive performance interpretation, (2) a comprehensive case study of YOLO models from v1 to v13, and (3) a benchmarking methodology that is designed for comparing model metrics and literature standards. This modular design enhances analytical depth, user interactivity, and evaluation generalizability across various deep learning architectures.
 
 <img width="1107" height="792" alt="image" src="https://github.com/user-attachments/assets/eb8f382f-f7c3-4f07-8373-909755ec4b1c" />
-Fig.6 Bar chart generated by the agent evaluator
+Fig. 6 Bar chart generated by the agent evaluator
 
 <img width="1107" height="792" alt="image" src="https://github.com/user-attachments/assets/9fbfedf6-ce80-4c5a-ad0b-9e765b37141a" />
-Fig.7 Evolutionary Trajectory of YOLO Architectures from v1 to v13: Structural Advancements and Performance Trends
+Fig. 7 Evolutionary trajectory of YOLO architectures from v1 to v13: Structural advancements and performance trends
 
 
 
@@ -85,7 +83,8 @@ https://github.com/user-attachments/assets/6a7e3827-7b06-458c-892d-5e51d1e0699a
 
 
 <img width="1107" height="740" alt="image" src="https://github.com/user-attachments/assets/bc0c3cb9-9d04-4d64-8a1f-28cb7e791bc4" />
-Fig. 8 Comparative Evaluation of LLM-Based Agents on YOLO Model Analysis: Reasoning Depth, Interpretability, and Response Effectiveness
+Fig. 8 Comparative evaluation of LLM-based agents for YOLO model analysis: Reasoning depth, interpretability, and response effectiveness
+
 
 Q3:Please evaluate these 10 papers related to deep learning YOLO series models, why are they cited so much? Meanwhile, provide some suggestions on how to design YOLO models that will attract widespread attention from researchers?
 -
