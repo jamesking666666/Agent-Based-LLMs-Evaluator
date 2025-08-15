@@ -45,6 +45,7 @@ Fig. 3 Modular architecture of agent-based AI solutions within the ABLE framewor
 Fig. 4 Conversational interaction architecture that is based on ChatFlow: A modular agent design for deep learning model evaluation in the ABLE framework
 
 <img width="932" height="599" alt="image" src="https://github.com/user-attachments/assets/071f8cfb-c84d-4093-a809-31da9f430e48" />
+
 Fig. 5 Structural overview of the agent-based LLM evaluator, which comprises three interrelated modules: (1) graphical visualization for intuitive performance interpretation, (2) a comprehensive case study of YOLO models from v1 to v13, and (3) a benchmarking methodology that is designed for comparing model metrics and literature standards. This modular design enhances analytical depth, user interactivity, and evaluation generalizability across various deep learning architectures.
 
 <img width="1107" height="792" alt="image" src="https://github.com/user-attachments/assets/eb8f382f-f7c3-4f07-8373-909755ec4b1c" />
